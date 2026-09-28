@@ -1,23 +1,63 @@
 aid: benga
+
 name: Benga
-description: 'Benga is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Benga International GmbH is a diversified provider of specialized products and services, including medical supplies, military and police equipment, travel accessories, and custom branding solutions. Operating out of Cyprus with a global client base across Germany, Japan, and the USA, Benga leverages over 25 years of experience to deliver high‑quality, durable products tailored to government tenders and private sector needs. The company emphasizes innovative research, comprehensive engineering, and customer service, positioning itself as a world‑class supplier for discerning clients seeking reliable, customizable solutions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/benga/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- Medical Supplies
+- Military Equipment
+- Travel Products
+- Custom Branding
+- International
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/benga-llms.txt
+- type: Hosts
+  url: hosts/benga-hosts.yml
+- type: Vendors
+  url: vendors/benga-vendors.yml
+- type: DomainSecurity
+  url: security/benga-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/benga
+  url: https://www.benga.eu
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: The website https://www.benga.eu provides only marketing content and no developer documentation or API endpoints.
+  evidence:
+    - url: https://www.benga.eu
+      status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
